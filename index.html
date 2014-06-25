@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WaffleTracker</title>
+
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+
+        <script src="js/jquery-1.9.1.js"></script>
+        <script src="jquery.mobile-1.2.0.min.js"></script>
+
+        <script type="text/javascript" charset="utf-8">
+
+        
+
+		 </script>
+
+
+
+
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+    </head>
+    <body>
+    	<div data-role="stuff" data-theme="d" id="stuff" ontouchmove="touchMove(event)">
+    	
+
+    		<div id="headerText"><span style="font-weight:900;">Waffle</span><span style="font-weight:300;">Tracker</span></div>
+
+    		<div id="content">
+				<div style="padding-top:10px; font-size: 50px;">Miners</div>
+				<div>
+					<div>Scrypt Hashrate: <span id="scryptHash"></span></div>
+					<div>Scrypt-n Hashrate: <span id="scryptnHash"></span></div>
+					<div>X11 Hashrate: <span id="x11Hash"></span></div>
+				</div>
+
+				<div style="padding-top:10px; font-size: 50px;">Wafflepool Balances</div>
+				<div>
+					<div class="padBottom">
+						<div>Scrypt sent: <span id="scryptSent"></span></div>
+						<div>Scrypt unsent: <span id="scryptUnsent"></span></div>
+						<div>Scrypt total: <span id="scryptTotal"></span></div>
+					</div>
+					<div class="padBottom">
+						<div>Scrypt-n sent: <span id="scryptnSent"></span></div>
+						<div>Scrypt-n unsent: <span id="scryptnUnsent"></span></div>
+						<div>Scrypt-n total: <span id="scryptnTotal"></span></div>
+					</div>
+					<div class="padBottom">
+						<div>X11 sent: <span id="x11Sent"></span></div>
+						<div>X11 unsent: <span id="x11Unsent"></span></div>
+						<div>X11 total: <span id="x11Total"></span></div>
+					</div>
+					<div class="padBottom">
+						<div>Total earned: <span id="totalEarned"></span></div>
+						<div>Total sent: <span id="totalSent"></span></div>
+					</div>
+				</div>
+
+				<div style="font-size:50px;">Address Balance</div>
+				<div>BTC Amount: <span id="bitAm"></span></div>
+				<div>USD Equiv: <span id="usdAm"></span></div>
+
+				<form style="margin-top: 20px;">
+					Wafflepool address: &nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="waffleAd" id="waffleForm"></input></br>
+					Bitcoin address: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="bitAd" id="bitForm"></input></form>
+				</form>
+
+				<div id="updateButton">Update</div>
+			</div>
+    	</div>
+    	
+	    <script type="text/javascript" src="js/index.js"></script>
+    	<script type="text/javascript" charset="utf-8">
+            touchMove = function(event) {
+                // Prevent scrolling on this element
+                event.preventDefault();
+            }
+	    </script>
+    </body>
+</html>
