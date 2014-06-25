@@ -24,14 +24,20 @@
     		<div id="headerText"><span style="font-weight:900;">Waffle</span><span style="font-weight:300;">Tracker</span></div>
 
     		<div id="content">
-				<div style="padding-top:10px; font-size: 50px;">Miners</div>
+
+    			<form style="margin-top: 20px;">
+					Wafflepool address: <input type="text" name="waffleAd" id="waffleForm" style="width: 400px; margin-left:30px; height: 30px;"></input></br>
+					Bitcoin address: <input type="text" name="bitAd" id="bitForm" style="width: 400px; margin-left:102px; height: 30px;"></input></form>
+				</form>
+
+				<div style="margin-top:20px; font-size: 80px;">Miners</div>
 				<div>
 					<div>Scrypt Hashrate: <span id="scryptHash"></span></div>
 					<div>Scrypt-n Hashrate: <span id="scryptnHash"></span></div>
 					<div>X11 Hashrate: <span id="x11Hash"></span></div>
 				</div>
 
-				<div style="padding-top:10px; font-size: 50px;">Wafflepool Balances</div>
+				<div style="padding-top:10px; font-size: 80px;">Wafflepool Balances</div>
 				<div>
 					<div class="padBottom">
 						<div>Scrypt sent: <span id="scryptSent"></span></div>
@@ -54,14 +60,11 @@
 					</div>
 				</div>
 
-				<div style="font-size:50px;">Address Balance</div>
+				<div style="font-size:80px;">Address Balance</div>
 				<div>BTC Amount: <span id="bitAm"></span></div>
 				<div>USD Equiv: <span id="usdAm"></span></div>
 
-				<form style="margin-top: 20px;">
-					Wafflepool address: &nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="waffleAd" id="waffleForm"></input></br>
-					Bitcoin address: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="bitAd" id="bitForm"></input></form>
-				</form>
+				
 
 				<div id="updateButton">Update</div>
 			</div>

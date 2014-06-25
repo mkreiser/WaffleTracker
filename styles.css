@@ -3,7 +3,7 @@
 body { 
 	-webkit-user-select:none;
 	font-family: 'Lato', sans-serif; 
-	font-size: 28px; 
+	font-size: 40px; 
 	background-color: #EFDDCB;	
 	width: 100%; 
 	height: 100% !important;
@@ -28,7 +28,7 @@ a {
 }
 
 #content{
-	width:600px;
+	width:800px;
 	margin-left: auto;
 	margin-right: auto;
 	color: #000000;

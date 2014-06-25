@@ -9,6 +9,9 @@ var bitcoinAddress = window.localStorage.getItem("bit");
 if (waffleAddress == ""){waffleAddress = "";}
 if (bitcoinAddress == ""){bitcoinAddress = "";}
 
+$('#waffleForm').val(waffleAddress);
+$('#bitForm').val(bitcoinAddress);
+
 var url =  "http://wafflepool.com/api/miner?address=";
 url += waffleAddress;
 url = encodeURIComponent(url);
