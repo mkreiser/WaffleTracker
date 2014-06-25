@@ -1,23 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.odottraffic.odotlocationfinder" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>ODOT Location Finder</name>
+<widget id="com.mikekreiser.waffletracker" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>WaffleTracker</name>
     <description>
-        ODOT Location Finder uses GPS technology to provide roadway information based on the user's location.
+        Track your miners on Wafflepool along with your bitcoin address.
     </description>
-    <author email="john.macadam@dot.state.oh.us" href="http://www.dot.state.oh.us">ODOT Traffic Operations</author>
+    <author email="mkreise2@illinois.edu" href="http://web.engr.illinois.edu/~mkreise2/">Mike Kreiser</author>
     <!-- Android Plugin Packages -->
     <feature name="Device"><param name="android-package" value="org.apache.cordova.device.Device" /></feature>
-    <feature name="Geolocation"><param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" /></feature>
     <feature name="NetworkStatus"><param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" /></feature>
     <feature name="Notification"><param name="android-package" value="org.apache.cordova.dialogs.Notification" /></feature>
+    <feature name="Storage"><param name="android-package" value="org.apache.cordova.Storage" /></feature>
     <!-- iOS Plugin Packages -->
-    <feature name="Geolocation"><param name="ios-package" value="CDVLocation" /></feature>
     <feature name="NetworkStatus"><param name="ios-package" value="CDVConnection" /></feature>
     <feature name="Notification"><param name="ios-package" value="CDVNotification" /></feature>
     <!-- General Preferences -->
     <preference name="phonegap-version" value="3.3.0" />
     <preference name="orientation" value="portrait" />
-    <preference name="enablelocation" value="true" />
     <preference name="fullscreen" value="false" />
     <preference name="webviewbounce" value="false" />
     <preference name="prerendered-icon" value="true" />
@@ -32,7 +30,6 @@
     <preference name="android-installLocation" value="auto" />
     <!-- Target Platformss -->
     <gap:platform name="android" />
-    <gap:platform name="ios" />
     <!-- Plugins -->
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.dialogs" />
