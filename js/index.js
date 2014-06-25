@@ -81,7 +81,6 @@ $.ajax({
 });
 
 $('#updateButton').click(function(){
-        alert($('#bitForm').val());
         waffleAddress = $('#waffleForm').val();
         bitcoinAddress = $('#bitForm').val();
         window.localStorage.setItem("waffle", waffleAddress);
