@@ -1,11 +1,13 @@
 //var waffleAddress = "1NBk17C9cGgg5HUFRT54sQCZwr4AmkZYgn";
 //var bitcoinAddress = "1NBk17C9cGgg5HUFRT54sQCZwr4AmkZYgn";
 
+var permanentStorage = window.localStorage;
+
 var waffleAddress = window.localStorage.getItem("waffle");
 var bitcoinAddress = window.localStorage.getItem("bit");
 
-if (waffleAddress == "" || isNaN(waffleAddress) == true){waffleAddress = "";}
-if (bitcoinAddress == "" || isNaN(bitcoinAddress) == true){bitcoinAddress = "";}
+if (waffleAddress == ""){waffleAddress = "";}
+if (bitcoinAddress == ""){bitcoinAddress = "";}
 
 var url =  "http://wafflepool.com/api/miner?address=";
 url += waffleAddress;
