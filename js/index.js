@@ -4,21 +4,44 @@
 var permanentStorage = window.localStorage;
 
 var waffleAddress = window.localStorage.getItem("waffle");
-var bitcoinAddress = window.localStorage.getItem("bit");
 
 if (waffleAddress == ""){waffleAddress = "";}
-if (bitcoinAddress == ""){bitcoinAddress = "";}
 
 $('#waffleForm').val(waffleAddress);
-$('#bitForm').val(bitcoinAddress);
+
+$('#snInfo').hide();
+$('#xInfo').hide();
+$('#wInfo').hide();
 
 update();
 
+$('#sButton').click(function(){
+    $('#snInfo').hide();
+    $('#xInfo').hide();
+    $('#wInfo').hide();
+});
+
+$('#snButton').click(function(){
+    $('#sInfo').hide();
+    $('#xInfo').hide();
+    $('#wInfo').hide();
+});
+
+$('#xButton').click(function(){
+    $('#sInfo').hide();
+    $('#snInfo').hide();
+    $('#wInfo').hide();
+});
+
+$('#wButton').click(function(){
+    $('#sInfo').hide();
+    $('#snInfo').hide();
+    $('#xInfo').hide();
+});
+
 $('#updateButton').click(function(){
         waffleAddress = $('#waffleForm').val();
-        bitcoinAddress = $('#bitForm').val();
         window.localStorage.setItem("waffle", waffleAddress);
-        window.localStorage.setItem("bit", bitcoinAddress);
         update();
 });
 
@@ -71,7 +94,7 @@ $.ajax({
 });
 
 var url3 = "http://blockchain.info/address/";
-url3 += bitcoinAddress;
+url3 += waffleAddress;
 url3 += "?format=json";
 url3 = encodeURIComponent(url3);
 url3 = "http://jsonp.guffa.com/Proxy.ashx?url=" + url3;

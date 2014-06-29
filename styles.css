@@ -27,8 +27,20 @@ a {
 	padding-bottom: 10px;
 }
 
+.topButton{
+	background-color: #F7931A;
+	border: 10px solid #FFFFFF;
+	padding: 20px;
+	color: #FFFFFF;
+	position: relative;
+	top: 50px;
+	display: inline-block;
+	width: 150px;
+	text-align: center;
+}
+
 #content{
-	width:800px;
+	width:840px;
 	margin-left: auto;
 	margin-right: auto;
 	color: #000000;
@@ -44,6 +56,11 @@ a {
 	text-align: center;
 }
 
+#infoContent{
+	position: relative;
+	top: 150px;
+}
+
 #updateButton{
 	background-color: #F7931A;
 	color: #FFFFFF;
@@ -51,7 +68,9 @@ a {
 	margin-top: 50px;
 	text-align: center;
 	font-size: 40px;
-	border-width: 5px;
+	border-width: 10px;
 	border-style: solid;
 	border-color: #FFFFFF;
+	position: relative;
+	top: 175px;
 }
