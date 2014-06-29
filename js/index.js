@@ -119,7 +119,7 @@ $.ajax({
         url: url2,
         dataType: 'jsonp',
         success: function(results){
-            $('#btcRate').html("$" + results.btc_to_usd);
+            $('#bitRate').html("$" + roundToTwo(results.btc_to_usd));
             $('#bitAm').html(data.final_balance/100000000 + " BTC");
             $('#usdAm').html(roundToTwo(results.btc_to_usd * data.final_balance/100000000) + " USD")
         }
