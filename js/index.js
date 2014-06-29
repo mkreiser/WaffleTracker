@@ -20,6 +20,7 @@ $('#sButton').click(function(){
     $('#xInfo').hide();
     $('#wInfo').hide();
     $('#sInfo').show();
+    $('#tInfo').show();
 });
 
 $('#snButton').click(function(){
@@ -27,6 +28,7 @@ $('#snButton').click(function(){
     $('#xInfo').hide();
     $('#wInfo').hide();
     $('#snInfo').show();
+    $('#tInfo').show();
 });
 
 $('#xButton').click(function(){
@@ -34,12 +36,14 @@ $('#xButton').click(function(){
     $('#snInfo').hide();
     $('#wInfo').hide();
     $('#xInfo').show();
+    $('#tInfo').show();
 });
 
 $('#wButton').click(function(){
     $('#sInfo').hide();
     $('#snInfo').hide();
     $('#xInfo').hide();
+    $('#tInfo').hide();
     $('#wInfo').show();
 });
 
