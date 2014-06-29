@@ -44,8 +44,6 @@ a {
 	margin-left: auto;
 	margin-right: auto;
 	color: #000000;
-	position: relative;
-	top: 100px;
 }
 
 #headerText{
@@ -60,7 +58,7 @@ a {
 
 #infoContent{
 	position: relative;
-	top: 150px;
+	top: 120px;
 }
 
 #updateButton{
@@ -74,6 +72,6 @@ a {
 	border-style: solid;
 	border-color: #FFFFFF;
 	position: fixed;
-	top:920px;
+	top:820px;
 	width: 770px;
 }
