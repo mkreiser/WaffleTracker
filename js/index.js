@@ -54,12 +54,6 @@ $('#updateButton').click(function(){
 });
 
 function update(){
-
-$('#scryptHash').html('Loading...');
-$('#scryptnHash').html('Loading...');
-$('#x11Hash').html('Loading...');
-$('#bitRate').html('Loading...');
-
 var url =  "http://wafflepool.com/api/miner?address=";
 url += waffleAddress;
 url = encodeURIComponent(url);
