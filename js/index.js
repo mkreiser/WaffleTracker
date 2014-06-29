@@ -19,24 +19,28 @@ $('#sButton').click(function(){
     $('#snInfo').hide();
     $('#xInfo').hide();
     $('#wInfo').hide();
+    $('#sInfo').show();
 });
 
 $('#snButton').click(function(){
     $('#sInfo').hide();
     $('#xInfo').hide();
     $('#wInfo').hide();
+    $('#snInfo').show();
 });
 
 $('#xButton').click(function(){
     $('#sInfo').hide();
     $('#snInfo').hide();
     $('#wInfo').hide();
+    $('#xInfo').show();
 });
 
 $('#wButton').click(function(){
     $('#sInfo').hide();
     $('#snInfo').hide();
     $('#xInfo').hide();
+    $('#wInfo').show();
 });
 
 $('#updateButton').click(function(){
