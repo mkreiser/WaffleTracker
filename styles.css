@@ -75,3 +75,62 @@ a {
 	top:820px;
 	width: 770px;
 }
+
+@media all and (max-width : 880px) and (min-width : 660px) {
+
+	.topButton{
+		width:100px;
+		font-size: 26px;
+	}
+
+	#content{
+		width: 640px;
+		font-size: 28px;
+	}
+
+	#headerText{
+		font-size: 60px;
+	}
+
+	#infoContent{
+		top:80px;
+	}
+
+	#updateButton{
+		width:570px;
+		top:600px;
+	}
+
+}
+
+@media all and (max-width : 659px){
+
+	.topButton{
+		border: 5px solid #FFFFFF;
+		padding: 10px;
+		width:70px;
+		font-size: 14px;
+		top:20px;
+	}
+
+	#content{
+		width: 400px;
+		font-size: 20px;
+	}
+
+	#headerText{
+		font-size: 30px;
+	}
+
+	#infoContent{
+		top:40px;
+	}
+
+	#updateButton{
+		width:360px;
+		top:400px;
+		padding: 15px;
+		border: 5px solid #FFFFFF;
+		font-size: 20px;
+	}
+}

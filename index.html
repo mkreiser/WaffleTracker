@@ -19,15 +19,17 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 <body>
-	<div data-role="stuff" data-theme="d" id="stuff" ontouchmove="touchMove(event)">
+	<div data-role="stuff" data-theme="d" id="stuff">
 
 		<div id="headerText"><span style="font-weight:900;">Waffle</span><span style="font-weight:300;">Tracker</span></div>
 
 		<div id="content">
 
-			<form style="margin-top: 20px;">
-				Wafflepool address: <input type="text" name="waffleAd" id="waffleForm" style="width: 400px; margin-left:30px; height: 30px; font-size: 25px;"></input>
-			</form>
+			<div style="margin-top: 20px;text-align:center;">
+				Wafflepool address: 
+			</div>
+
+			<div style="text-align:center;"><input type="text" name="waffleAd" id="waffleForm" style="display:inline-block;width: 400px; margin-top:10px; height: 30px; font-size: 25px;"></input></div>
 
 			<div><span class="topButton" id="sButton">Scrypt</span><span class="topButton" id="snButton">Scrypt-n</span><span class="topButton" id="xButton">x11</span><span class="topButton" id="wButton">Wallet</span></div>
 
@@ -70,11 +72,6 @@
 
 	<script type="text/javascript" src="cordova.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript" charset="utf-8">
-	    touchMove = function(event) {
-	        // Prevent scrolling on this element
-	        event.preventDefault();
-	    }
-	</script>
+
 </body>
 </html>
