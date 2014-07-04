@@ -10,14 +10,16 @@ if (waffleAddress == ""){waffleAddress = "";}
 $('#waffleForm').val(waffleAddress);
 
 $('#snInfo').hide();
-$('#xInfo').hide();
+$('#x1Info').hide();
+$('#x3Info').hide();
 $('#wInfo').hide();
 
 update();
 
 $('#sButton').click(function(){
     $('#snInfo').hide();
-    $('#xInfo').hide();
+    $('#x1Info').hide();
+    $('#x3Info').hide();
     $('#wInfo').hide();
     $('#sInfo').show();
     $('#tInfo').show();
@@ -25,24 +27,36 @@ $('#sButton').click(function(){
 
 $('#snButton').click(function(){
     $('#sInfo').hide();
-    $('#xInfo').hide();
+    $('#x1Info').hide();
+    $('#x3Info').hide();
     $('#wInfo').hide();
     $('#snInfo').show();
     $('#tInfo').show();
 });
 
-$('#xButton').click(function(){
+$('#x1Button').click(function(){
     $('#sInfo').hide();
     $('#snInfo').hide();
     $('#wInfo').hide();
-    $('#xInfo').show();
+    $('#x3Info').hide();
+    $('#x1Info').show();
+    $('#tInfo').show();
+});
+
+$('#x3Button').click(function(){
+    $('#sInfo').hide();
+    $('#snInfo').hide();
+    $('#wInfo').hide();
+    $('#x1Info').hide();
+    $('#x3Info').show();
     $('#tInfo').show();
 });
 
 $('#wButton').click(function(){
     $('#sInfo').hide();
     $('#snInfo').hide();
-    $('#xInfo').hide();
+    $('#x1Info').hide();
+    $('#x3Info').hide();
     $('#tInfo').hide();
     $('#wInfo').show();
 });
@@ -58,6 +72,7 @@ function update(){
 $('#scryptHash').html('Loading...');
 $('#scryptnHash').html('Loading...');
 $('#x11Hash').html('Loading...');
+$('#x13Hash').html('Loading...');
 $('#bitRate').html('Loading...');
 
 var url =  "http://wafflepool.com/api/miner?address=";
@@ -82,10 +97,12 @@ $.ajax({
             $('#scryptHash').html(data.scrypt.hashrate_str);
             $('#scryptnHash').html(data.nscrypt.hashrate_str);
             $('#x11Hash').html(data.x11.hashrate_str);
+            $('#x13Hash').html(data.x13.hashrate_str);
 
             var sTotal = data.scrypt.balances.sent + data.scrypt.balances.confirmed + data.scrypt.balances.unconverted;
             var snTotal = data.nscrypt.balances.sent + data.nscrypt.balances.confirmed + data.nscrypt.balances.unconverted;
             var xTotal = data.x11.balances.sent + data.x11.balances.confirmed + data.x11.balances.unconverted;
+            var x3Total = data.x13.balances.sent + data.x13.balances.confirmed + data.x13.balances.unconverted;
 
             $('#scryptSent').html(roundToEight(data.scrypt.balances.sent) + " BTC");
             $('#scryptUnsent').html(roundToEight(data.scrypt.balances.confirmed + data.scrypt.balances.unconverted) + " BTC");
@@ -99,8 +116,12 @@ $.ajax({
             $('#x11Unsent').html(roundToEight(data.x11.balances.confirmed + data.x11.balances.unconverted) + " BTC");
             $('#x11Total').html(roundToEight(xTotal) + " BTC");
 
-            $('#totalEarned').html(roundToEight(sTotal + snTotal + xTotal) + " BTC");
-            $('#totalSent').html(roundToEight(data.scrypt.balances.sent + data.nscrypt.balances.sent + data.x11.balances.sent) + " BTC");
+            $('#x13Sent').html(roundToEight(data.x13.balances.sent) + " BTC");
+            $('#x13Unsent').html(roundToEight(data.x13.balances.confirmed + data.x13.balances.unconverted) + " BTC");
+            $('#x13Total').html(roundToEight(x3Total) + " BTC");
+
+            $('#totalEarned').html(roundToEight(sTotal + snTotal + xTotal +x3Total) + " BTC");
+            $('#totalSent').html(roundToEight(data.scrypt.balances.sent + data.nscrypt.balances.sent + data.x11.balances.sent + data.x13.balances.sent) + " BTC");
         }
     });
     }
