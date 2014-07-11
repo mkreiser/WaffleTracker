@@ -16,7 +16,7 @@ $('#wInfo').hide();
 
 update();
 
-$('#sButton').click(function(){
+$('#sButton').on('touchend',function(){
     $('#snInfo').hide();
     $('#x1Info').hide();
     $('#x3Info').hide();
@@ -25,7 +25,7 @@ $('#sButton').click(function(){
     $('#tInfo').show();
 });
 
-$('#snButton').click(function(){
+$('#snButton').on('touchend',function(){
     $('#sInfo').hide();
     $('#x1Info').hide();
     $('#x3Info').hide();
@@ -34,7 +34,7 @@ $('#snButton').click(function(){
     $('#tInfo').show();
 });
 
-$('#x1Button').click(function(){
+$('#x1Button').on('touchend',function(){
     $('#sInfo').hide();
     $('#snInfo').hide();
     $('#wInfo').hide();
@@ -43,7 +43,7 @@ $('#x1Button').click(function(){
     $('#tInfo').show();
 });
 
-$('#x3Button').click(function(){
+$('#x3Button').on('touchend',function(){
     $('#sInfo').hide();
     $('#snInfo').hide();
     $('#wInfo').hide();
@@ -52,7 +52,7 @@ $('#x3Button').click(function(){
     $('#tInfo').show();
 });
 
-$('#wButton').click(function(){
+$('#wButton').on('touchend',function(){
     $('#sInfo').hide();
     $('#snInfo').hide();
     $('#x1Info').hide();
@@ -61,7 +61,7 @@ $('#wButton').click(function(){
     $('#wInfo').show();
 });
 
-$('#updateButton').click(function(){
+$('#updateButton').on('touchend',function(){
         waffleAddress = $('#waffleForm').val();
         window.localStorage.setItem("waffle", waffleAddress);
         update();
