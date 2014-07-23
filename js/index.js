@@ -82,15 +82,8 @@ $.ajax({
     dataType: 'jsonp',
     success: function(data) {
 
-        var url2 = 'coinbase.com/api/v1/currencies/exchange_rates';
-        url2 = encodeURIComponent(url2);
-        url2 = 'http://jsonp.guffa.com/Proxy.ashx?url=' + url2;
-    
-        $.ajax({
-        url: url2,
-        dataType: 'jsonp',
-        success: function(results){
-
+        if(data.scrypt !== undefined)
+        {
             $('#scryptHash').html(data.scrypt.hashrate_str);
             $('#scryptnHash').html(data.nscrypt.hashrate_str);
             $('#x11Hash').html(data.x11.hashrate_str);
@@ -119,38 +112,50 @@ $.ajax({
 
             $('#totalEarned').html(roundToEight(sTotal + snTotal + xTotal +x3Total) + " BTC");
             $('#totalSent').html(roundToEight(data.scrypt.balances.sent + data.nscrypt.balances.sent + data.x11.balances.sent + data.x13.balances.sent) + " BTC");
+
+            updateBit();
         }
-    });
+
+        else{
+            $('#scryptHash').html("Error! Bad address");
+            $('#scryptnHash').html("Error! Bad address");
+            $('#x11Hash').html("Error! Bad address");
+            $('#x13Hash').html("Error! Bad address");
+            $('#bitRate').html("Error! Bad address");
+            $('#bitAm').html("");
+            $('#usdAm').html("");
+        }
     }
-
 });
+}
 
-var url3 = "http://blockchain.info/address/";
-url3 += waffleAddress;
-url3 += "?format=json";
-url3 = encodeURIComponent(url3);
-url3 = "http://jsonp.guffa.com/Proxy.ashx?url=" + url3;
+function updateBit(){
+    var url3 = "http://blockchain.info/address/";
+    url3 += waffleAddress;
+    url3 += "?format=json";
+    url3 = encodeURIComponent(url3);
+    url3 = "http://jsonp.guffa.com/Proxy.ashx?url=" + url3;
 
-$.ajax({
-    url: url3,
-    dataType: 'jsonp',
-    success: function(data) {
-        var url2 = 'coinbase.com/api/v1/currencies/exchange_rates';
-        url2 = encodeURIComponent(url2);
-        url2 = 'http://jsonp.guffa.com/Proxy.ashx?url=' + url2;
-    
-        $.ajax({
-        url: url2,
+    $.ajax({
+        url: url3,
         dataType: 'jsonp',
-        success: function(results){
-            $('#bitRate').html("$" + roundToTwo(results.btc_to_usd));
-            $('#bitAm').html(data.final_balance/100000000 + " BTC");
-            $('#usdAm').html("$" + roundToTwo(results.btc_to_usd * data.final_balance/100000000));
+        success: function(data) {
+            var url2 = 'coinbase.com/api/v1/currencies/exchange_rates';
+            url2 = encodeURIComponent(url2);
+            url2 = 'http://jsonp.guffa.com/Proxy.ashx?url=' + url2;
+        
+            $.ajax({
+            url: url2,
+            dataType: 'jsonp',
+            success: function(results){
+                $('#bitRate').html("$" + roundToTwo(results.btc_to_usd));
+                $('#bitAm').html(data.final_balance/100000000 + " BTC");
+                $('#usdAm').html("$" + roundToTwo(results.btc_to_usd * data.final_balance/100000000));
+            }
+        });
+
         }
     });
-
-    }
-});
 }
 
 //Rounding
