@@ -123,3 +123,196 @@ input[type="text"]{
 	position: absolute;
 	top: 0; left: 0; bottom: 100px; right: 0;
 }
+
+@media all and (max-width:900px) and (min-width: 621px){
+	.item{
+		font-size: 40px;
+		height: 120px;
+		line-height: 120px;
+		padding: 0 0 0 20px;
+	}
+
+	.tab-item{
+		line-height: 100px;
+		font-size: 28px;
+	}
+
+	#cardHead2{
+		font-size: 28px;
+		height: 80px;
+		line-height: 80px;
+	}
+
+	input[type="text"]{
+		font-size: 20px;
+		height: 120px;
+		line-height: 120px;
+	}
+
+	#sContent{
+		height: 556px;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 100px; right: 0;
+	}
+
+	#nContent{
+		height: 556px;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 100px; right: 0;
+	}
+
+	#x11Content{
+		height: 556px;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 100px; right: 0;
+	}
+
+	#x13Content{
+		height: 556px;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 100px; right: 0;
+	}
+
+	#wContent{
+		height: 793px;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 100px; right: 0;
+	}
+}
+
+@media all and (max-width:620px) and (min-width: 421px){
+	.item{
+		font-size: 28px;
+		height: 80px;
+		line-height: 80px;
+		padding: 0 0 0 10px;
+	}
+
+	.tab-item{
+		line-height: 60px;
+		font-size: 22px;
+	}
+
+	#cardHead2{
+		font-size: 20px;
+		height: 60px;
+		line-height: 60px;
+		padding: 0 0 0 10px;
+	}
+
+	#tabs{
+		height: 60px;
+	}
+
+	input[type="text"]{
+		font-size: 15px;
+		height: 80px;
+		line-height: 80px;
+	}
+
+	#sContent{
+		height: 374px;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 60px; right: 0;
+	}
+
+	#nContent{
+		height: 374px;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 60px; right: 0;
+	}
+
+	#x11Content{
+		height: 374px;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 60px; right: 0;
+	}
+
+	#x13Content{
+		height: 374px;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 60px; right: 0;
+	}
+
+	#wContent{
+		height: 533px;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 60px; right: 0;
+	}
+}
+
+@media all and (max-width:420px){
+	.item{
+		font-size: 20px;
+		height: 50px;
+		line-height: 50px;
+		padding: 0 0 0 10px;
+	}
+
+	.tab-item{
+		line-height: 60px;
+		font-size: 15px;
+	}
+
+	#cardHead2{
+		font-size: 20px;
+		height: 40px;
+		line-height: 40px;
+		padding: 0 0 0 10px;
+	}
+
+	#tabs{
+		height: 60px;
+	}
+
+	input[type="text"]{
+		font-size: 15px;
+		height: 80px;
+		line-height: 80px;
+	}
+
+	#sContent{
+		height: 234px;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 60px; right: 0;
+	}
+
+	#nContent{
+		height: 234px;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 60px; right: 0;
+	}
+
+	#x11Content{
+		height: 234px;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 60px; right: 0;
+	}
+
+	#x13Content{
+		height: 234px;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 60px; right: 0;
+	}
+
+	#wContent{
+		height: 333px;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 60px; right: 0;
+	}
+}
