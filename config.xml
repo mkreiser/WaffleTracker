@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.mikekreiser.waffletracker" version="1.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.mikekreiser.waffletracker" version="2.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>WaffleTracker</name>
     <description>
         Track your miners on Wafflepool along with your bitcoin address.
@@ -14,20 +14,21 @@
     <feature name="NetworkStatus"><param name="ios-package" value="CDVConnection" /></feature>
     <feature name="Notification"><param name="ios-package" value="CDVNotification" /></feature>
     <!-- General Preferences -->
-    <preference name="phonegap-version" value="3.3.0" />
-    <preference name="orientation" value="portrait" />
-    <preference name="fullscreen" value="false" />
-    <preference name="webviewbounce" value="false" />
-    <preference name="prerendered-icon" value="true" />
-    <preference name="stay-in-webview" value="true" />
-    <preference name="detect-data-types" value="true" />
-    <preference name="exit-on-suspend" value="false" />
-    <preference name="show-splash-screen-spinner" value="false" />
-    <preference name="auto-hide-splash-screen" value="true" />
-    <preference name="disable-cursor" value="false" />
-    <preference name="DisallowOverscroll" value="true" />
-    <preference name="android-minSdkVersion" value="14" />
-    <preference name="android-installLocation" value="auto" />
+    <preference name="phonegap-version"             value="3.3.0" />
+    <preference name="orientation"                  value="portrait" />
+    <preference name="fullscreen"                   value="false" />
+    <preference name="webviewbounce"                value="false" />
+    <preference name="prerendered-icon"             value="true" />
+    <preference name="stay-in-webview"              value="true" />
+    <preference name="detect-data-types"            value="true" />
+    <preference name="exit-on-suspend"              value="false" />
+    <preference name="show-splash-screen-spinner"   value="false" />
+    <preference name="auto-hide-splash-screen"      value="true" />
+    <preference name="disable-cursor"               value="false" />
+    <preference name="DisallowOverscroll"           value="true" />
+    <preference name="android-minSdkVersion"        value="9" />
+    <preference name="android-targetSdkVersion"     value="14" />
+    <preference name="android-installLocation"      value="auto" />
     <!-- Target Platformss -->
     <gap:platform name="android" />
     <!-- Plugins -->

@@ -1,70 +1,67 @@
 //var waffleAddress = "1NBk17C9cGgg5HUFRT54sQCZwr4AmkZYgn";
 //var bitcoinAddress = "1NBk17C9cGgg5HUFRT54sQCZwr4AmkZYgn";
 
+angular.module('ionicApp', ['ionic'])
+
 var permanentStorage = window.localStorage;
 
 var waffleAddress = window.localStorage.getItem("waffle");
 
-if (waffleAddress == ""){waffleAddress = "";}
+if (waffleAddress == ""){waffleAddress = "1NBk17C9cGgg5HUFRT54sQCZwr4AmkZYgn";}
 
 $('#waffleForm').val(waffleAddress);
 
-$('#snInfo').hide();
-$('#x1Info').hide();
-$('#x3Info').hide();
-$('#wInfo').hide();
+$('#nContent').hide();
+$('#x11Content').hide();
+$('#x13Content').hide();
+$('#wContent').hide();
 
 update();
 
 $('#sButton').on('touchend',function(){
-    $('#snInfo').hide();
-    $('#x1Info').hide();
-    $('#x3Info').hide();
-    $('#wInfo').hide();
-    $('#sInfo').show();
-    $('#tInfo').show();
+    $('#nContent').hide();
+    $('#x11Content').hide();
+    $('#x13Content').hide();
+    $('#wContent').hide();
+    $('#sContent').show();
 });
 
-$('#snButton').on('touchend',function(){
-    $('#sInfo').hide();
-    $('#x1Info').hide();
-    $('#x3Info').hide();
-    $('#wInfo').hide();
-    $('#snInfo').show();
-    $('#tInfo').show();
+$('#nButton').on('touchend',function(){
+    $('#sContent').hide();
+    $('#x11Content').hide();
+    $('#x13Content').hide();
+    $('#wContent').hide();
+    $('#nContent').show();
 });
 
-$('#x1Button').on('touchend',function(){
-    $('#sInfo').hide();
-    $('#snInfo').hide();
-    $('#wInfo').hide();
-    $('#x3Info').hide();
-    $('#x1Info').show();
-    $('#tInfo').show();
+$('#x11Button').on('touchend',function(){
+    $('#sContent').hide();
+    $('#nContent').hide();
+    $('#wContent').hide();
+    $('#x13Content').hide();
+    $('#x11Content').show();
 });
 
-$('#x3Button').on('touchend',function(){
-    $('#sInfo').hide();
-    $('#snInfo').hide();
-    $('#wInfo').hide();
-    $('#x1Info').hide();
-    $('#x3Info').show();
-    $('#tInfo').show();
+$('#x13Button').on('touchend',function(){
+    $('#sContent').hide();
+    $('#nContent').hide();
+    $('#wContent').hide();
+    $('#x11Content').hide();
+    $('#x13Content').show();
 });
 
 $('#wButton').on('touchend',function(){
-    $('#sInfo').hide();
-    $('#snInfo').hide();
-    $('#x1Info').hide();
-    $('#x3Info').hide();
-    $('#tInfo').hide();
-    $('#wInfo').show();
+    $('#sContent').hide();
+    $('#nContent').hide();
+    $('#x11Content').hide();
+    $('#x13Content').hide();
+    $('#wContent').show();
 });
 
-$('#updateButton').on('touchend',function(){
-        waffleAddress = $('#waffleForm').val();
-        window.localStorage.setItem("waffle", waffleAddress);
-        update();
+$('.cardHead').on('touchend',function(){
+    waffleAddress = $('#waffleForm').val();
+    window.localStorage.setItem("waffle", waffleAddress);
+    update();
 });
 
 function update(){
@@ -148,7 +145,7 @@ $.ajax({
         success: function(results){
             $('#bitRate').html("$" + roundToTwo(results.btc_to_usd));
             $('#bitAm').html(data.final_balance/100000000 + " BTC");
-            $('#usdAm').html(roundToTwo(results.btc_to_usd * data.final_balance/100000000) + " USD")
+            $('#usdAm').html("$" + roundToTwo(results.btc_to_usd * data.final_balance/100000000));
         }
     });
 

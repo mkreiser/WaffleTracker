@@ -9,17 +9,72 @@
     <meta content="yes" name="apple-mobile-web-app-capable" />
 
     <script src="js/jquery-1.9.1.js"></script>
-    <script src="jquery.mobile-1.2.0.min.js"></script>
+    <script src="js/ionic.bundle.js"></script>
+    <script src="js/ionic.js"></script>
 
-    <script type="text/javascript" charset="utf-8">
-	</script>
-
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
+    <link rel="stylesheet" href="css/ionic.css">
     <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
-<body>
-	<div data-role="stuff" data-theme="d" id="stuff">
+<body ng-app="ionic">
+
+	<div class="tabs" id="tabs">
+	  <span class="tab-item" id="sButton">Scrypt</span>
+	  <span class="tab-item" id="nButton">Scrypt-N</span>
+	  <span class="tab-item" id="x11Button">X11</span>
+	  <span class="tab-item" id="x13Button">X13</span>
+	  <span class="tab-item" id="wButton">Wallet</span>
+	</div>
+
+	<div class="list card" id="sContent">
+		<div class="item item-divider cardHead" id="cardHead2">Scrypt<div style="float:right;padding-right:10px;"><i class="icon ion-refresh"></i></div></div>
+		<div class="item">Hashrate: <span id="scryptHash"></span></div>
+		<div class="item">Sent: <span id="scryptSent"></span></div>
+		<div class="item">Unsent: <span id="scryptUnsent"></span></div>
+		<div class="item">Total: <span id="scryptTotal"></span></div>
+	</div>
+
+	<div class="list card" id="nContent">
+		<div class="item item-divider cardHead" id="cardHead2">Scrypt-N<div style="float:right;padding-right:10px;"><i class="icon ion-refresh"></i></div></div>
+		<div class="item">Hashrate: <span id="scryptnHash"></span></div>
+		<div class="item">Sent: <span id="scryptnSent"></span></div>
+		<div class="item">Unsent: <span id="scryptnUnsent"></span></div>
+		<div class="item">Total: <span id="scryptnTotal"></span></div>
+	</div>
+
+	<div class="list card" id="x11Content">
+		<div class="item item-divider cardHead" id="cardHead2">X11<div style="float:right;padding-right:10px;"><i class="icon ion-refresh"></i></div></div>
+		<div class="item">Hashrate: <span id="x11Hash"></span></div>
+		<div class="item">Sent: <span id="x11Sent"></span></div>
+		<div class="item">Unsent: <span id="x11Unsent"></span></div>
+		<div class="item">Total: <span id="x11Total"></span></div>
+	</div>
+
+	<div class="list card" id="x13Content">
+		<div class="item item-divider cardHead" id="cardHead2">X13<div style="float:right;padding-right:10px;"><i class="icon ion-refresh"></i></div></div>
+		<div class="item">Hashrate: <span id="x13Hash"></span></div>
+		<div class="item">Sent: <span id="x13Sent"></span></div>
+		<div class="item">Unsent: <span id="x13Unsent"></span></div>
+		<div class="item">Total: <span id="x13Total"></span></div>
+	</div>
+
+	<div class="list card" id="wContent">
+		<div class="item item-divider cardHead" id="cardHead2">Wallet<div style="float:right;padding-right:10px;"><i class="icon ion-refresh"></i></div></div>
+		<div class="item">BTC/USD: <span id="bitRate"></span></div>
+		<div class="item">Balance: <span id="bitAm"></span></div>
+		<div class="item">USD Equiv: <span id="usdAm"></span></div>
+		<label class="item item-input"><input type="text" placeholder="Wafflepool Address" id="waffleForm"></label>
+	</div>
+	
+
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+
+</body>
+</html>
+
+
+<!--
+<div data-role="stuff" data-theme="d" id="stuff">
 
 		<div id="headerText"><span style="font-weight:900;">Waffle</span><span style="font-weight:300;">Tracker</span></div>
 
@@ -75,9 +130,4 @@
 			
 		</div>
 	</div>
-
-	<script type="text/javascript" src="cordova.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
-
-</body>
-</html>
+-->
