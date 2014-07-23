@@ -87,40 +87,54 @@ input[type="text"]{
 	background-color: #F7931A;
 	position: fixed;
 	bottom: 0;
-	border-top: 10px solid #FFFFFF;
+}
+
+#header{
+	height: 100px;
+	background-color: #F7931A;
+	position: fixed;
+	top:0;
+}
+
+.bar .title{
+	font-size: 50px;
+	font-family: 'Roboto-Light';
+	padding: 0;
+	line-height: 100px;
+	height: 100px;
 }
 
 #sContent{
 	height: 576px;
 	margin: auto;
 	position: absolute;
-	top: 0; left: 0; bottom: 100px; right: 0;
+	top: 100px; left: 0; bottom: 100px; right: 0;
 }
 
 #nContent{
 	height: 576px;
 	margin: auto;
 	position: absolute;
-	top: 0; left: 0; bottom: 100px; right: 0;
+	top: 100px; left: 0; bottom: 100px; right: 0;
 }
 
 #x11Content{
 	height: 576px;
 	margin: auto;
 	position: absolute;
-	top: 0; left: 0; bottom: 100px; right: 0;
+	top: 100px; left: 0; bottom: 100px; right: 0;
 }
 
 #x13Content{
 	height: 576px;
 	margin: auto;
 	position: absolute;
-	top: 0; left: 0; bottom: 100px; right: 0;
+	top: 100px; left: 0; bottom: 100px; right: 0;
 }
 
 #wContent{
 	height: 813px;
 	margin: auto;
 	position: absolute;
-	top: 0; left: 0; bottom: 100px; right: 0;
+	top: 100px; left: 0; bottom: 100px; right: 0;
 }
