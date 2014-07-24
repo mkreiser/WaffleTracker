@@ -117,6 +117,7 @@ $.ajax({
         }
 
         else{
+            $(".list.card span").html("");
             $('#scryptHash').html("Error! Bad address");
             $('#scryptnHash').html("Error! Bad address");
             $('#x11Hash').html("Error! Bad address");
