@@ -1,6 +1,38 @@
 //var waffleAddress = "1NBk17C9cGgg5HUFRT54sQCZwr4AmkZYgn";
 //var bitcoinAddress = "1NBk17C9cGgg5HUFRT54sQCZwr4AmkZYgn";
 
+var gaPlugin;
+
+function initialize() {
+    document.addEventListener("deviceready", onDeviceReady, true);
+}
+
+function onDeviceReady() {
+    gaPlugin = window.plugins.gaPlugin;
+    gaPlugin.init(nativePluginResultHandler2, nativePluginErrorHandler, "UA-53247724-2", 10);
+}
+
+function goingAway() {
+    gaPlugin.exit(nativePluginResultHandler, nativePluginErrorHandler);
+}
+
+function nativePluginResultHandler (result) {
+    console.log('nativePluginResultHandler: '+result);
+}
+
+function nativePluginResultHandler2 (result) {
+    PageButtonClicked();
+}
+
+function nativePluginErrorHandler (error) {
+    console.log('nativePluginErrorHandler: '+error);
+}
+
+function PageButtonClicked() {
+    gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, "main.waffletracker.com");
+    console.log('yes');
+}
+
 angular.module('ionicApp', ['ionic'])
 
 var permanentStorage = window.localStorage;
