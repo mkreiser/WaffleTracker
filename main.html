@@ -12,12 +12,11 @@
     <script src="js/ionic.bundle.js"></script>
     <script src="js/ionic.js"></script>
 
-    <script type="text/javascript" src="ga.js"></script>
-    <script>
-	 var _gaq = _gaq || [];
-	    _gaq.push(['_setAccount', 'UA-53247724-2']);
-	    _gaq.push(['_setDomainName', 'none']);
-	    _gaq.push(['_trackPageview', 'Waffletracker.com/main']);
+    
+    <script type="text/javascript" src="js/GALocalStorage.js"></script>
+	<script>
+	    ga_storage._setAccount('UA-53247724-3'); //Replace with your own
+	    ga_storage._trackPageview('/index.html');
 	</script>
 
     <link rel="stylesheet" href="css/ionic.css">
