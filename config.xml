@@ -14,7 +14,7 @@
     <feature name="NetworkStatus"><param name="ios-package" value="CDVConnection" /></feature>
     <feature name="Notification"><param name="ios-package" value="CDVNotification" /></feature>
     <!-- General Preferences -->
-    <preference name="phonegap-version"             value="3.5.1" />
+    <preference name="phonegap-version"             value="3.5.0" />
     <preference name="orientation"                  value="portrait" />
     <preference name="fullscreen"                   value="false" />
     <preference name="webviewbounce"                value="false" />
